@@ -60,6 +60,12 @@ export default () => {
                 <div>Data from TheMovieDB.com API</div>
                 <div>Created for training purposes by Filipe Deboni</div>
             </footer>
+
+            {movieList.length <= 0 &&
+            <div className="loading">
+                <img src="https://blog.ecadauma.com.br/wp-content/uploads/2020/04/netflix-loading.gif" alt="loading"/>
+            </div>
+            }
         </div>
     );
 }
