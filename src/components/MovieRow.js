@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MovieRow.css'
 
-export default ({title, items}) => {
+const MovieRow = ({title, items}) => {
 
   const [scrollX, setScrollX] = useState(0);
   
@@ -27,11 +27,11 @@ export default ({title, items}) => {
       <h2>{title}</h2>
 
       <div className="movieRow--left" onClick={handleLeftArrow}>
-        <i class="fas fa-angle-left" style={{fontSize: 40}}></i>
+        <i className="fas fa-angle-left" style={{fontSize: 40}}></i>
       </div>
 
       <div className="movieRow--right" onClick={handleRightArrow}>
-        <i class="fas fa-angle-right" style={{fontSize: 40}}></i>
+        <i className="fas fa-angle-right" style={{fontSize: 40}}></i>
       </div>
 
       <div className="movieRow--listarea">
@@ -49,3 +49,5 @@ export default ({title, items}) => {
     </div>
   );
 }
+
+export default MovieRow;
